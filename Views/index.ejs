@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> <%= title %> </title>
+   <style>
+      body{
+         background-color: antiquewhite;
+         text-align: center;
+      }
+      h1{
+         color: red;
+      }
+      ul{
+         list-style-type: none;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+      } 
+      li{
+         border: 2px solid red;
+         padding: 1rem 3rem;
+      }
+   </style>
+</head>
+<body>
+   <h1> <%= title %> </h1>
+   <ul>
+      <% for (let i = 0; i< post.length; i++) { %>
+      <li>
+         <h2> <%= post[i].title %> </h2>
+         <p> <%= post[i].body %> </p>
+      </li>
+      <% } %>
+   </ul>
+</body>
+</html> 
